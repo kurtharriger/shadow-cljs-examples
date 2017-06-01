@@ -16,3 +16,10 @@ app.start();
 
 registerServiceWorker();
 
+if (module.hot) {
+  module.hot.accept("shadow-cljs/demo.app", function() {
+    app.stop();
+    app = require("shadow-cljs/demo.app");
+    app.start();
+  });
+}

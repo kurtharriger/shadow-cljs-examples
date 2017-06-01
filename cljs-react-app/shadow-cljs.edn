@@ -2,8 +2,5 @@
   :target :npm-module
   :output-dir "node_modules/shadow-cljs"
   :runtime :browser
-  :entries [demo.app]
-  :devtools
-  {:before-load demo.app/stop
-   :after-load demo.app/start}}]
+  :entries [demo.app]}]
 

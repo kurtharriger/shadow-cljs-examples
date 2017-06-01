@@ -7,10 +7,32 @@ yarn cljs -- --dev
 yarn start
 ```
 
+### Fixing HMR
 
-## Problems
+`create-react-app` doesn't reload code from `node_modules` by default so we need to do some adjustments.
 
-I want to write a proper guide for this but first need to work out the kinks.
+Edit this file:
+```
+node_modules/react-scripts/config/webpackDevServer.config.js
+```
 
-- `create-react-app` doesn't reload code from `node_modules` so I tried using `shadow-cljs` to reload the code. This works fine but `yarn start` never picks up any changes so if you do a full page reload you will get an "old" version. The problem is that CRA will do a full reload when you edit CSS or so.
+And change the `watchOptions.ignored` regexp from
+```
+    watchOptions: {
+      ignored: /node_modules/
+    },
+```
+to
+```
+    watchOptions: {
+      ignored: /node_modules\/(?!shadow-cljs)/
+    },
+```
 
+You can also do a full `eject` but that seems like overkill for such a simple change.
+
+Maybe this won't be necessary in the future but for now I prefer this way over the alternatives.
+
+https://github.com/facebookincubator/create-react-app/issues/2281
+
+Don't know why this is so slow though ... letting `shadow-cljs` reload the code instead of HMR is way faster but since you cannot disable code-reloading of HMR they interfere with each other frequently.
