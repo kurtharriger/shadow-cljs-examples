@@ -35,4 +35,4 @@ Maybe this won't be necessary in the future but for now I prefer this way over t
 
 https://github.com/facebookincubator/create-react-app/issues/2281
 
-Don't know why this is so slow though ... letting `shadow-cljs` reload the code instead of HMR is way faster but since you cannot disable code-reloading of HMR they interfere with each other frequently.
+Don't know why this is so slow though ... letting `shadow-cljs` reload the code instead of HMR is way faster but since you cannot disable code-reloading of CRA they interfere with each other frequently.
