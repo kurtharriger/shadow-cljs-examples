@@ -1,0 +1,25 @@
+;; shadow-cljs.edn configuration
+{:source-paths ["src"]
+ :dependencies []
+ :server {:autostart #{:app}}
+
+ :builds
+ {:app
+  {:target :browser
+   :output-dir "public/js"
+   :asset-path "/js"
+   :modules {:common {:entries [my.app.common]}
+
+             :page-a {:entries [my.app.page-a]
+                      :depends-on #{:common}}
+
+             :page-b {:entries [my.app.page-b]
+                      :depends-on #{:common}}}
+
+   :release
+   {:output-dir "production/js"}
+
+
+   :compiler-options
+   {:externs ["my-externs.js"]}
+   }}}

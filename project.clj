@@ -9,7 +9,8 @@
 
   :dependencies
   [[org.clojure/clojure "1.9.0-alpha17"]
-   [thheller/shadow-cljs "1.0.20170531"]]
+   [thheller/shadow-cljs "1.0.20170613"]]
 
   :source-paths
-  ["cljs-react-app/src"])
+  ["cljs-react-app/src"
+   "code-split/src"])
