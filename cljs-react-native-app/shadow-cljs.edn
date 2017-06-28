@@ -7,4 +7,4 @@
 
  :builds
  {:app {:target :npm-module
-        :output-dir "generated"}}}
+        :output-dir "node_modules/shadow-cljs"}}}
