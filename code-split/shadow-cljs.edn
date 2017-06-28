@@ -1,7 +1,6 @@
 ;; shadow-cljs.edn configuration
 {:source-paths ["src"]
  :dependencies []
- :server {:autostart #{:app}}
 
  :builds
  {:app
@@ -16,9 +15,12 @@
              :page-b {:entries [my.app.page-b]
                       :depends-on #{:common}}}
 
+   :devtools
+   {:http-root "public"
+    :http-port 9000}
+
    :release
    {:output-dir "production/js"}
-
 
    :compiler-options
    {:externs ["my-externs.js"]}

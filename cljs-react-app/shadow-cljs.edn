@@ -2,15 +2,11 @@
  ["src"]
 
  :dependencies
- [[thheller/shadow-client "1.0.20170607"]]
-
- :repl {:port 8401}
- :http {:port 8400}
+ []
 
  :builds
- [{:id :npm
-   :target :npm-module
-   :output-dir "node_modules/shadow-cljs"
-   :runtime :browser
-   :entries [demo.app]}]}
+ {:npm {:target :npm-module
+        :output-dir "node_modules/shadow-cljs"
+        :runtime :browser
+        :entries [demo.app]}}}
 

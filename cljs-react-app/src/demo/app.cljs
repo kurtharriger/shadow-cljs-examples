@@ -11,7 +11,7 @@
 
 (defn root []
   (html/div
-    (title "CLJS")
+    (title "CLJS!")
     ;; $ is a little interop helper
     ($ Foo {:hello "this is from CLJS!!!"})
     ;; this works as well

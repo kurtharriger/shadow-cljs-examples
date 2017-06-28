@@ -3,7 +3,7 @@
 This was created by `yarn create react-app cljs-react-app`.
 
 ```
-yarn cljs -- --dev
+shadow-cljs watch npm
 yarn start
 ```
 
