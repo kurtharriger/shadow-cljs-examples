@@ -1,0 +1,21 @@
+{
+  "devDependencies": {
+    "source-map-loader": "^0.2.1",
+    "source-map-support": "^0.4.15",
+    "webpack": "^2.5.1",
+    "ws": "^2.3.1"
+  },
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "shadow-cljs": "^0.18.1"
+  },
+  "shadow-cljs": {
+    "dependencies": [
+      [
+        "thheller/shadow-client",
+        "1.0.20170518"
+      ]
+    ]
+  }
+}

@@ -8,8 +8,11 @@
 
   :dependencies
   [[org.clojure/clojure "1.9.0-alpha17"]
-   [thheller/shadow-cljs "1.0.20170622"]]
+   [thheller/shadow-cljs "1.0.20170628"]]
 
   :source-paths
   ["cljs-react-app/src"
-   "code-split/src"])
+   "cljs-react-native-app/src"
+   "code-split/src"
+   "macros/src"
+   "webpack/src"])
