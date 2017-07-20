@@ -15,4 +15,5 @@
    "cljs-react-native-app/src"
    "code-split/src"
    "macros/src"
-   "webpack/src"])
+   "webpack/src"
+   "electron/src"])
