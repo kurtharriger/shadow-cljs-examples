@@ -1,0 +1,17 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src"]
+
+ :dependencies
+ [[proto-repl "0.3.1"]]
+
+ :nrepl {:port 11100}
+
+ :builds
+ {:app {:target :browser
+        :output-dir "public/js"
+        :asset-path "/js"
+        :modules {:main {:entries [test.app]}}
+        :devtools
+        {:http-root "public"
+         :http-port 11101}}}}
