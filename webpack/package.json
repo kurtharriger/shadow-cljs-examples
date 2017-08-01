@@ -8,14 +8,6 @@
   "dependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "shadow-cljs": "^0.18.1"
-  },
-  "shadow-cljs": {
-    "dependencies": [
-      [
-        "thheller/shadow-client",
-        "1.0.20170518"
-      ]
-    ]
+    "shadow-cljs": "^0.18.5"
   }
 }

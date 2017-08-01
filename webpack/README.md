@@ -5,11 +5,8 @@ CLJS for JS devs
 ### Instructions
 
 ```
-git clone https://github.com/thheller/npm-module-example.git
-cd npm-module-example
-
 yarn (or npm install)
-./node_modules/shadow-cljs/bin/shadow-cljs compile npm
+./node_modules/.bin/shadow-cljs compile npm
 
 # or install shadow-cljs globally as well
 yarn global add shadow-cljs
