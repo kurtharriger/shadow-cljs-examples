@@ -8,7 +8,7 @@
 
   :dependencies
   [[org.clojure/clojure "1.9.0-alpha17"]
-   [thheller/shadow-cljs "1.0.20170628"]]
+   [thheller/shadow-cljs "2.0.0-alpha13"]]
 
   :source-paths
   ["cljs-react-app/src"
@@ -16,4 +16,5 @@
    "code-split/src"
    "macros/src"
    "webpack/src"
-   "electron/src"])
+   "electron/src"
+   "browser/src"])
