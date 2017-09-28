@@ -19,8 +19,13 @@
 
    :js-options
    {:resolve
-    {"jquery" {:target :global
-               :global "jQuery"}}}
+    {"jquery"
+     {:target :global
+      :global "jQuery"}
+
+     "crypto"
+     {:target :global
+      :global "window.crypto"}}}
 
    :devtools
    {:http-root "public"

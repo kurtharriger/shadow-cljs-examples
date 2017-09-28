@@ -2,6 +2,7 @@
   (:require ["react" :as react :refer (createElement)]
             ["react-dom" :refer (render)]
             ["jquery" :as jq]
+            ["js-nacl" :as nacl-factory]
             ["material-ui/RaisedButton" :as button]
             ["material-ui/styles/getMuiTheme" :as get-theme]
             ["material-ui/styles/MuiThemeProvider" :as theme-provider]))
@@ -20,3 +21,9 @@
 
 (-> (jq "#app")
     (.append "this was appended by jQuery"))
+
+(defn use-nacl [nacl]
+  (let [bytes (.. nacl (random_bytes 16))]
+    (js/console.log "nacl" bytes (.. nacl (to_hex bytes)))))
+
+(nacl-factory/instantiate use-nacl)
