@@ -646,9 +646,9 @@ shadow-cljs-jar@^0.10.0:
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/shadow-cljs-jar/-/shadow-cljs-jar-0.10.0.tgz#9895e6e5ccfde1c7b673737b1dfd9149194b644f"
 
-shadow-cljs@^2.0.0-alpha15:
-  version "2.0.0-alpha15"
-  resolved "https://registry.yarnpkg.com/shadow-cljs/-/shadow-cljs-2.0.0-alpha15.tgz#5c902e2068f6e1391e758ac28987ea3403333e94"
+shadow-cljs@^2.0.0-alpha16:
+  version "2.0.0-alpha16"
+  resolved "https://registry.yarnpkg.com/shadow-cljs/-/shadow-cljs-2.0.0-alpha16.tgz#0e557dc5f7c4df6a9bef20acaf69fcfd725714b6"
   dependencies:
     mkdirp "^0.5.1"
     node-libs-browser "^2.0.0"

@@ -17,6 +17,11 @@
    :modules
    {:main {:entries [demo.app]}}
 
+   :js-options
+   {:resolve
+    {"jquery" {:target :global
+               :global "jQuery"}}}
+
    :devtools
    {:http-root "public"
     :http-port 4001}

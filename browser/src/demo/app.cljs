@@ -1,6 +1,7 @@
 (ns demo.app
   (:require ["react" :as react :refer (createElement)]
             ["react-dom" :refer (render)]
+            ["jquery" :as jq]
             ["material-ui/RaisedButton" :as button]
             ["material-ui/styles/getMuiTheme" :as get-theme]
             ["material-ui/styles/MuiThemeProvider" :as theme-provider]))
@@ -16,3 +17,6 @@
     (createElement button/default nil "Hello World")))
 
 (render (app) (js/document.getElementById "app"))
+
+(-> (jq "#app")
+    (.append "this was appended by jQuery"))

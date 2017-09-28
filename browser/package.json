@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "shadow-cljs": "^2.0.0-alpha15"
+    "shadow-cljs": "^2.0.0-alpha16"
   },
   "dependencies": {
     "material-ui": "^0.19.2",
