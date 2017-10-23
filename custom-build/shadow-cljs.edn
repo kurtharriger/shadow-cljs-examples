@@ -6,4 +6,4 @@
  []
 
  :builds
- {:test {:target build/custom}}}
+ {:test {:target custom/build}}}

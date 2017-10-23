@@ -1,4 +1,4 @@
-(ns build)
+(ns custom)
 
-(defn custom [state]
+(defn build [state]
   (throw (ex-info "implement me" {})))
