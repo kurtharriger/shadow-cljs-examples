@@ -7,12 +7,13 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
   :dependencies
-  [[org.clojure/clojure "1.9.0-alpha17"]
-   [thheller/shadow-cljs "2.0.0-alpha13"]]
+  [[org.clojure/clojure "1.9.0-RC1"]
+   [thheller/shadow-cljs "2.0.94"]]
 
   :source-paths
   ["cljs-react-app/src"
    "cljs-react-native-app/src"
+   "local-js/src"
    "code-split/src"
    "macros/src"
    "webpack/src"
