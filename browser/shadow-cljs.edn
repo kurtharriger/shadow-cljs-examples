@@ -19,15 +19,16 @@
 
    :js-options
    {:resolve
-    {"jquery"
-     {:target :global
-      :global "jQuery"}
 
-     "crypto"
+    {"rxjs"
      {:target :global
-      :global "window.crypto"}}}
+      :global "Rx"}}
+
+    "rxjs/Observable"
+    {:target :global
+     :global "Rx.Observable"}}
+
 
    :devtools
    {:http-root "public"
-    :http-port 4001}
-   }}}
+    :http-port 4001}}}}

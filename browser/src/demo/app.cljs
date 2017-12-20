@@ -1,7 +1,7 @@
 (ns demo.app
   (:require ["react" :as react :refer (createElement)]
             ["react-dom" :refer (render)]
-            ["jquery" :as jq]
+            ;;["jquery" :as jq]
             ["js-nacl" :as nacl-factory]
             ["material-ui/RaisedButton" :as button]
             ["material-ui/styles/getMuiTheme" :as get-theme]
@@ -20,8 +20,8 @@
 
 (render (app) (js/document.getElementById "app"))
 
-(-> (jq "#app")
-    (.append "this was appended by jQuery"))
+;;(-> (jq "#app")
+;;    (.append "this was appended by jQuery"))
 
 (defn use-nacl [nacl]
   (let [bytes (.. nacl (random_bytes 16))]
