@@ -17,18 +17,6 @@
    :modules
    {:main {:entries [demo.app]}}
 
-   :js-options
-   {:resolve
-
-    {"rxjs"
-     {:target :global
-      :global "Rx"}}
-
-    "rxjs/Observable"
-    {:target :global
-     :global "Rx.Observable"}}
-
-
    :devtools
    {:http-root "public"
     :http-port 4001}}}}
