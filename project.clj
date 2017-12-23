@@ -4,7 +4,8 @@
                  [reagent "0.7.0"]
                  [re-frame "0.10.2"]
                  [binaryage/devtools "0.9.8"]
-                 [org.roman01la/cljss "1.5.13"]]
+                 [org.roman01la/cljss "1.5.13"]
+                 [sablono "0.8.1"]]
                  
 
   :plugins [[lein-cljsbuild "1.1.7"]]
