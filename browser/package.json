@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "shadow-cljs": "^2.0.0-alpha19"
+    "shadow-cljs": "^2.0.123"
   },
   "dependencies": {
     "js-nacl": "^1.2.2",

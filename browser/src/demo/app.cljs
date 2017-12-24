@@ -1,7 +1,6 @@
 (ns demo.app
   (:require ["react" :as react :refer (createElement)]
             ["react-dom" :refer (render)]
-            ["jquery" :as jq]
             ["js-nacl" :as nacl-factory]
             ["material-ui/RaisedButton" :as button]
             ["material-ui/styles/getMuiTheme" :as get-theme]
@@ -17,13 +16,13 @@
   (createElement theme-provider/default #js {:theme theme}
     (createElement button/default nil "Hello World")))
 
-(render (app) (js/document.getElementById "app"))
-
-(-> (jq "#app")
-    (.append "this was appended by jQuery"))
-
 (defn use-nacl [nacl]
   (let [bytes (.. nacl (random_bytes 16))]
     (js/console.log "nacl" bytes (.. nacl (to_hex bytes)))))
 
 (nacl-factory/instantiate use-nacl)
+
+(defn ^:export mount-root! [] 
+  (render (app) (js/document.getElementById "app")))
+
+(mount-root!)
