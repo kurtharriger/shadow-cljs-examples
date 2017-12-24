@@ -4,7 +4,19 @@
             ["js-nacl" :as nacl-factory]
             ["material-ui/RaisedButton" :as button]
             ["material-ui/styles/getMuiTheme" :as get-theme]
-            ["material-ui/styles/MuiThemeProvider" :as theme-provider]))
+            ["material-ui/styles/MuiThemeProvider" :as theme-provider]
+            [cljss.core :refer [inject-global]]
+            [reagent.core :as reagent]
+            [cljss.reagent :refer-macros [defstyled]]))
+
+(inject-global
+  {:body {:margin 0
+          :background-color "#BCD"
+          :color "#242424"}})
+
+(defstyled App :div
+  {:margin "2em"
+   :color "red"})
 
 ;; example of using material-ui which has been rather difficult before
 ;; the /default access is required due to the way material-ui is packaged
@@ -23,6 +35,7 @@
 (nacl-factory/instantiate use-nacl)
 
 (defn ^:export mount-root! [] 
-  (render (app) (js/document.getElementById "app")))
+  #_(render (app) (js/document.getElementById "app"))
+  (reagent/render [App [:h1 "hi"]]))
 
 (mount-root!)
