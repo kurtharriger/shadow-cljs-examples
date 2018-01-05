@@ -5,6 +5,7 @@
             ["material-ui/styles/getMuiTheme" :as get-theme]
             ["material-ui/styles/MuiThemeProvider" :as theme-provider]
             ["material-ui/RaisedButton" :as button]
+            [reagent-material-ui.core :as ui]
             ))
 
 (def theme (get-theme/default #js {}))

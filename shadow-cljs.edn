@@ -1,6 +1,5 @@
 {:dependencies [[re-frame "0.10.3-beta1"]
-                [reagent-material-ui "0.2.5"]
-                [cljsjs/material-ui "0.19.2-0"]
+                [reagent-material-ui "0.2.5" :exclusions [cljsjs/material-ui]]
 
                ;; clojure repl env
                 [cider/cider-nrepl "0.16.0"]
