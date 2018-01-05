@@ -1,0 +1,29 @@
+{:dependencies [[re-frame "0.10.3-beta1"]
+                [day8.re-frame/trace "0.1.14"]
+                [binaryage/devtools "0.9.8"]
+
+               ;; clojure repl env
+                [cider/cider-nrepl "0.16.0"]
+                ]
+
+ :source-paths ["src"]
+
+ ;; set an nrepl port for connection to a REPL.
+ :nrepl        {:port 8777
+                :nrepl-middleware [dirac.nrepl/middleware]}
+
+ :builds       {:browser {:target           :browser
+                          :modules          {:base {:entries [forensics.core]}}
+                          :output-dir       "public/js/compiled"
+                          :asset-path       "/js/compiled"
+                          :compiler-options {:closure-warnings {:global-this :off}
+                                             :closure-defines  {re-frame.trace.trace-enabled? true}
+
+                                             :optimizations    :whitespace
+                                             :source-maps      true
+                                           }
+                          :devtools         {:http-root    "public"
+                                             :http-handler shadow.http.push-state/handle
+                                             :http-port    8700
+                                             :after-load   forensics.core/mount-root
+                                             :preloads     [day8.re-frame.trace.preload devtools.preload]}}}}
