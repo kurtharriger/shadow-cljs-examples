@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "watch": "shadow-cljs watch browser"
+    "watch": "shadow-cljs watch browser",
+    "dirac": "/Applications/Google\\ Chrome\\ Canary.app/Contents/MacOS/Google\\ Chrome\\ Canary --remote-debugging-port=9222 --no-first-run --user-data-dir=.dirac http://localhost:9700"
   },
   "devDependencies": {
     "shadow-cljs": "^2.0.129"
