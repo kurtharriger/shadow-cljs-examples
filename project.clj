@@ -7,8 +7,8 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
   :dependencies
-  [[org.clojure/clojure "1.9.0-RC1"]
-   [thheller/shadow-cljs "2.0.94"]]
+  [[org.clojure/clojure "1.9.0"]
+   [thheller/shadow-cljs "2.0.141"]]
 
   :source-paths
   ["cljs-react-app/src"
@@ -18,4 +18,5 @@
    "macros/src"
    "webpack/src"
    "electron/src"
-   "browser/src"])
+   "browser/src"
+   "koa/src"])

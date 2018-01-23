@@ -1,7 +1,9 @@
 import cljs, { keyword } from "goog:cljs.core";
 import { x } from "goog:demo.bar";
 
-console.log("bar x", x);
+import React from "react";
+
+console.log("bar x", x, React);
 
 function hello(who) {
   // template literals, cljs interop

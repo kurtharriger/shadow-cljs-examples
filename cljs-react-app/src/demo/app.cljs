@@ -3,7 +3,7 @@
             [shadow.dom :as dom]
             ["react" :as react]
             ["react-dom" :refer (render)]
-            ["./foo" :refer (Foo)]))
+            #_ ["./foo" :refer (Foo)]))
 
 (defstyled title :h1
   [env]
@@ -13,9 +13,9 @@
   (html/div
     (title "CLJS!")
     ;; $ is a little interop helper
-    ($ Foo {:hello "this is from CLJS!!!"})
+    #_ ($ Foo {:hello "this is from CLJS!!!"})
     ;; this works as well
-    (react/createElement Foo #js {:hello "also from CLJS!"})
+    #_ (react/createElement Foo #js {:hello "also from CLJS!"})
     ))
 
 (defn ^:export init []

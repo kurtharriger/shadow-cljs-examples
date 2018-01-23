@@ -1,0 +1,11 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src"]
+
+ :dependencies
+ []
+
+ :builds
+ {:server {:target :node-script
+           :main demo.server/main
+           :output-to "out/server.js"}}}

@@ -1,5 +1,8 @@
 {:source-paths
- ["src"]
+ ["../checkouts/shadow-cljs/src/main"
+  "src"]
+
+ :nrepl {:port 8450}
 
  :dependencies
  []

@@ -5,7 +5,8 @@
             ["js-nacl" :as nacl-factory]
             ["material-ui/RaisedButton" :as button]
             ["material-ui/styles/getMuiTheme" :as get-theme]
-            ["material-ui/styles/MuiThemeProvider" :as theme-provider]))
+            ["material-ui/styles/MuiThemeProvider" :as theme-provider]
+            ["@atlaskit/editor-core" :as ec]))
 
 ;; example of using material-ui which has been rather difficult before
 ;; the /default access is required due to the way material-ui is packaged
