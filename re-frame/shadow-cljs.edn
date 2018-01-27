@@ -6,7 +6,7 @@
                 [venantius/accountant "0.2.3"]
                 [thheller/shadow-cljsjs "0.0.5"]]
 
- :source-paths ["dev" "src" "test"]
+ :source-paths ["src/dev" "src/main" "src/test"]
 
  :nrepl {:port 8230}
 
