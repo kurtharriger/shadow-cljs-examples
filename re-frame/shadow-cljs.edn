@@ -3,12 +3,10 @@
                 [binaryage/devtools "0.9.8"]
                 [cider/cider-nrepl "0.16.0"]
                 [secretary "1.2.3"]
-                [venantius/accountant "0.2.3"] ]
+                [venantius/accountant "0.2.3"]
+                [thheller/shadow-cljsjs "0.0.5"]]
 
- :source-paths ["dev"
-                "test/cljs"
-                "src/cljs"
-                "src/cljc"]
+ :source-paths ["dev" "src" "test"]
 
  :nrepl {:port 8230}
 
