@@ -3,8 +3,7 @@
                 [binaryage/devtools "0.9.8"]
                 [cider/cider-nrepl "0.16.0"]
                 [secretary "1.2.3"]
-                [venantius/accountant "0.2.3"]
-                [thheller/shadow-cljsjs "0.0.5"]]
+                [venantius/accountant "0.2.3"]]
 
  :source-paths ["src/dev" "src/main" "src/test"]
 
