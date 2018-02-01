@@ -21,3 +21,10 @@ async function gimme(thing) {
 
 export { hello, gimme };
 export default "I got a default too!";
+
+export class ClassProperties {
+  settings = {
+    abc: 1,
+    xyz: 2
+  }
+}
