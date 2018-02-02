@@ -6,7 +6,10 @@
  []
 
  :builds
- {:app {:target :browser
+ {:app {:target build/custom
+        :middleware [:build/babelize]
+        :build/middleware [:build/spit-state :build/babelize]
+        :build/shadow-target :shadow.build.targets.browser/process
         :modules {:base {:entries [cljs.core]}
                   :app {:entries [demo.app]
                         :depends-on #{:base}}}
