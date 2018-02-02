@@ -12,18 +12,30 @@
 
 (defn spit-state [target]
   (fn [{:keys [:shadow.build/stage] :as state}]
+    (prn stage)
     (-> state
-        (dissoc :classpath)
+        #_(dissoc :classpath)
         (#(with-out-str (pprint %)))
         (->> (spit (str "state." (name stage) ".edn"))))
     (target state)))
 
 (defn babelize [target]
-  (fn [{:keys [:shadow.build/stage] :as state}]
-    ;; emit new source or even hackier start my own babel process and hijack the babel service
+  (fn [{:keys [:shadow.build/stage project-dir] :as state}]
+
+    ;; todo: compile-prepare seems too late but configure
+    ;; is only run once
+
+    ;; perhaps start my own babel process and hijack the babel service
     ;; in out channels...
-    (if (= stage :compile-prepare)
-      (->  (shell/sh "/bin/sh" "-c" "./node_modules/.bin/babel src -d src-gen") :out print))
+    (when #_(= stage :compile-prepare)
+        (= stage :configure)
+      (prn :babelizing)
+      (->  (shell/sh "/bin/sh" "-c" "./node_modules/.bin/babel src -d src-gen"
+                     :dir project-dir)
+           :out
+           print)
+      (prn :babelized))
+
     ;;todo update src to src-gen
     (target state)))
 
